@@ -55,3 +55,17 @@ const data = [
     text: "I Want To Go To Grandmas",
   },
 ];
+data.forEach(createBox);
+
+// Create Speech box
+function createBox(item) {
+  const box = document.createElement("div");
+
+  const { image, text } = item;
+
+  box.classList.add("box");
+  box.innerHTML = `<img src="${image}" alt="${text}" />
+  <p class="info" >${text}</p>
+  `;
+  main.appendChild(box);
+}
